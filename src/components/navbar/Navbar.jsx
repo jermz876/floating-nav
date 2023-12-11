@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NavLinks from "./NavLinks";
 
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -19,13 +19,7 @@ const Navbar = () => {
             }
         };
 
-        useEffect(() => {
-            window.addEventListener("scroll", checkNav);
-
-            return () => {
-                window.removeEventListener("scroll", checkNav);
-            };
-        }, []);
+        window.addEventListener("scroll", checkNav);
     }
 
     // useEffect(() => {
