@@ -12,7 +12,7 @@ const Navbar = () => {
 
     if (typeof window !== "undefined") {
         const checkNav = () => {
-            if (window.scrollY >= 400) {
+            if (window.scrollY >= 300) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -58,14 +58,9 @@ const Navbar = () => {
     return (
         <header
             className={
-                // navbar
-                //     ?
-
                 isvisible
                     ? "fixed z-99 w-full bg-white  text-black/90 shadow-md overflow-hidden"
                     : " sm:hidden fixed z-99 w-full bg-white  text-black/90 shadow-md overflow-hidden "
-
-                // : " sm:hidden sm:relative fixed z-99 w-full bg-white bg-opacity-90 text-black/90 shadow-md backdrop-blur-sm overflow-hidden   "
             }
         >
             <div className="max-w-7xl h-14 flex justify-between items-center mx-auto px-8 ">
@@ -77,9 +72,8 @@ const Navbar = () => {
                     {/* desktop navigation */}
                     <div className="hidden sm:flex ">
                         <NavLinks />
-                        <Link href="/meme">
-                            <button className="ml-4 text-blue-500 font-bold drop-shadow-lg">Contact</button>
-                        </Link>
+
+                        <button className="ml-4 text-blue-500 font-bold drop-shadow-lg">Contact</button>
                     </div>
 
                     {/* mobile navigation */}
