@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SectionTwo = () => {
@@ -23,6 +24,9 @@ const SectionTwo = () => {
                     maxime labore numquam? Corporis! Dolores nesciunt cumque necessitatibus quo, odio, perspiciatis culpa aut saepe, expedita perferendis sed sunt ex?
                     Amet ad natus autem id quisquam facilis quis? Tenetur tempore porro deserunt impedit nisi possimus?
                 </p>
+                {/* <div className="mx-auto max-w-full mt-20 blur-md">
+                    <Image src="/divmeme.jpg" alt="meme" width={800} height={499} />
+                </div> */}
             </div>
         </section>
     );
