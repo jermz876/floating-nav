@@ -30,24 +30,25 @@ const Navbar = () => {
     // const isMobile = window.innerWidth <= 768;
 
     const [navbar, setNavbar] = useState(false);
-    const [ismobile, setIsMobile] = useState(false);
 
-    const changeNavbar = () => {
-        if (window.scrollY >= 200) {
-            setNavbar(true);
-        } else {
-            setNavbar(false);
-        }
-    };
+    // const changeNavbar = () => {
+    //     if (window.scrollY >= 200) {
+    //         setNavbar(true);
+    //     } else {
+    //         setNavbar(false);
+    //     }
+    // };
 
-    window.addEventListener("scroll", changeNavbar);
+    // window.addEventListener("scroll", changeNavbar);
 
     return (
         <header
             className={
-                navbar
-                    ? "fixed z-99 w-full bg-white bg-opacity-90 text-black/90 shadow-md backdrop-blur-sm overflow-hidden "
-                    : " sm:hidden fixed z-99 w-full bg-white bg-opacity-90 text-black/90 shadow-md backdrop-blur-sm overflow-hidden   "
+                // navbar
+                //     ?
+                "fixed z-99 w-full bg-white bg-opacity-90 text-black/90 shadow-md backdrop-blur-sm overflow-hidden"
+
+                // : " sm:hidden sm:relative fixed z-99 w-full bg-white bg-opacity-90 text-black/90 shadow-md backdrop-blur-sm overflow-hidden   "
             }
         >
             <div className="max-w-7xl h-14 flex justify-between items-center mx-auto px-8 ">
