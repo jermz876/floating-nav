@@ -1,11 +1,17 @@
-import Image from "next/image";
+import Hero from "@/components/hero/Hero";
+import Newsletter from "@/components/newsletter/Newsletter";
+import NewSection from "@/components/section/NewSection";
+import SectionTwo from "@/components/section/SectionTwo";
 
 export default function Home() {
     return (
-        <main>
-            <section>
-                <h1>Hello World</h1>
-            </section>
+        <main className="  ">
+            <Hero />
+            <NewSection />
+            <Newsletter />
+            <SectionTwo />
+
+            <section id="services"></section>
         </main>
     );
 }
