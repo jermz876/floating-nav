@@ -10,9 +10,12 @@ import Link from "next/link";
 const Navbar = () => {
     const [isvisible, setIsVisible] = useState(false);
 
+    // check if navbar should scroll
     if (typeof window !== "undefined") {
         const checkNav = () => {
-            if (window.scrollY >= 300) {
+            const isMobile = window.innerWidth <= 648;
+
+            if (!isMobile && window.scrollY >= 200) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -40,27 +43,12 @@ const Navbar = () => {
     //     };
     // }, []);
 
-    // CHECK IF MOBILE
-    // const isMobile = window.innerWidth <= 768;
-
-    // const [navbar, setNavbar] = useState(false);
-
-    // const changeNavbar = () => {
-    //     if (window.scrollY >= 200) {
-    //         setNavbar(true);
-    //     } else {
-    //         setNavbar(false);
-    //     }
-    // };
-
-    // window.addEventListener("scroll", changeNavbar);
-
     return (
         <header
             className={
                 isvisible
-                    ? "fixed z-99 w-full bg-white  text-black/90 shadow-md overflow-hidden"
-                    : " sm:hidden fixed z-99 w-full bg-white  text-black/90 shadow-md overflow-hidden "
+                    ? "sticky top-0 left-0 z-999 w-full bg-white  text-black/90 shadow-md overflow-hidden"
+                    : " sm:hidden  z-99 w-full bg-[#555]  text-black/90 shadow-md overflow-hidden "
             }
         >
             <div className="max-w-7xl h-14 flex justify-between items-center mx-auto px-8 ">
